@@ -1,0 +1,103 @@
+.navWrap {
+  position: fixed;
+  width: 100%;
+  top: 0.625rem;
+  left: 0;
+  padding: 0px 20px;
+  z-index: 10;
+}
+
+.nav {
+  padding: 0.5rem 0.75rem;
+  border-radius: 50px;
+  background: #fff;
+  max-width: 1360px;
+  width: 100%;
+  box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.04);
+}
+
+.navProductLogo {
+  width: 5.625rem;
+}
+
+.navTabList {
+  gap: 0.625rem;
+}
+
+.navTab {
+  padding: 0.625rem 0.5rem;
+  text-decoration: none;
+  color: #200a2b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.navBtnLink {
+  text-decoration: none;
+}
+
+.navBtn {
+  padding: 0.75rem 0.75rem 0.75rem 1.25rem;
+  border-radius: 44px;
+  background: #ff006f;
+  color: #fff;
+  text-align: center;
+  font-family: "Red Hat Text";
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  gap: 0.625rem;
+  overflow: hidden;
+}
+
+.navBtn:hover svg {
+  animation: moveAnimate 0.4s ease-out;
+}
+
+@keyframes moveAnimate {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  48% {
+    opacity: 1;
+    transform: translate(25px, -25px); /* right-top */
+  }
+  49% {
+    opacity: 0;
+    transform: translate(25px, -25px);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-25px, 25px); /* left-bottom */
+  }
+  51% {
+    opacity: 1;
+    transform: translate(-25px, 25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.menuOpenIcon {
+  display: none;
+  width: 2rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .navTabList {
+    display: none !important;
+  }
+
+  .navBtn {
+    display: none !important;
+  }
+
+  .menuOpenIcon {
+    display: block;
+  }
+}
